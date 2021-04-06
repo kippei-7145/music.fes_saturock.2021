@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+	color: var(--grey);
+	font-family: sans-serif;
+}
+:root {
+  /* 使う色を--〜で指定できるようあらかじめぼdyに＃〜を指定するプロパティ */
+      --light-blue: #4bd1ec;
+      --blue: #1665cc;
+      --purple: #b473bf;
+      --pink: #ffb2c1;
+      --orenge-color: #ff9f67;
+      --yellow: #ffd673;
+      --light-green: #a2e29b;
+      --green: #00a2af;
+      --grey: #333;
+      --white: #fff;
+      --red: #E83E43;
+      --midorege: #F7B187;
+}
+/* common */
+p {
+  line-height: 1.7;
+}
+img {
+  max-width: 100%;
+}
+h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+header,
+h1,
+h2,
+h3,
+.hero_date {
+  font-family: impact, sans-serif;
+}
+
+/* Layout */
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* ヘッダー */
+header {
+  background: #333;
+  padding: 1rem 0;
+  /* 固定表示 */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+}
+header a {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+/* ボタン */
+.btn_menu {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  border: 1px solid rgba(255,255,255,.5 );
+  color: var(--white);
+  padding: .5rem 1rem;
+}
+/* ヘッダー内でのメニューボタンの位置を指定 */
+.header_list {
+  background: var(--grey);
+  width: 0;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+.header_list li {
+  text-align: center;
+  margin: 2rem 0;
+ }
+.header_list a {
+  display: block;
+ }
+.header_list.open-menu {
+  width: 100%;
+}
+/* #heroセクション＝＝＝＝＝＝＝＝＝＝＝ */
+#hero {
+  background-color: #4db1ec;
+  background-image: url('../images/hero_2.jpg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  /* アニメーションの記述 */
+  animation: bg-color 24s infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+/* アニメーションで変化する色の指定 */
+@keyframes bg-color {
+  0% {background-color: var(--light-blue);}
+  /* 12.5% {background-color: var(--blue);}
+  25% {background-color: var(--purple);}
+  37.5% {background-color: var(--pink);} */
+  50% {background-color: var(--orange);}
+  /* 62.5% {background-color: var(--yellow);}
+  75% {background-color: var(--light-green);}
+  87.5% {background-color: var(--green);} */
+  100% {background-color: var(--light-blue);}
+}
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  /* mix-blend-mode: overlay; */
+}
+#hero h1 .span_ttl {
+  background: linear-gradient(var(--yellow), var(--red));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#hero h1 .span_time {
+  background: linear-gradient(var(--pink), var(--red));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero_date {
+  text-align: center;
+  border-top: 3px solid var(--grey);
+  border-bottom: 3px solid var(--grey);
+  padding: .5rem 0;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/*アバウトセクション＝＝＝＝＝＝＝＝＝＝＝ */
+#about {
+  background: linear-gradient(90deg, var(--midorege), var(--red));
+  height: 100vh;
+  -webkit-clip-path: ellipse(100% 100% at 50% 0); 
+  clip-path: ellipse(100% 100% at 50% 0); 
+  padding: 4rem 1rem;
+}
+#about > h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#about p {
+  font-family: impact, sans-serif;
+  margin-bottom: 2rem;
+}
+#about .img img {
+  display: block;
+  border-radius: 50%;
+}
+/* ニュースセクション＝＝＝＝＝＝＝＝＝＝＝ */
+#news {
+  background-image: linear-gradient(90deg, var(--orenge-color), var(--yellow));
+  padding: 7rem 0;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 80%, 0 25%);
+  clip-path: polygon(100% 0, 100% 100%, 0 80%, 0 25%);
+}
+#news h2 {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.news_table {
+  color: var(--white);
+  width: 100%;
+}
+.news_table tr{
+  border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.news_table td {
+  display: block;
+  line-height: 1.5;
+}
+.news_date {
+  font-size: .875rem;
+  padding-top: 1rem;
+}
+.news_content {
+  padding-bottom: 1rem;
+}
+
+/*スピーカーエリア */
+#speakers {
+  padding: 4rem 1rem;
+}
+.speakers_list {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.speakers_text {
+  margin-left: 1rem;
+}
+#speakers h2 {
+  background: linear-gradient(var(--blue), var(--light-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#speakers h3 {
+  font-size: 2rem;
+  margin: .5rem 0;
+}
+.mana {
+  background: linear-gradient(var(--yellow), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.tatuya {
+  background: linear-gradient(var(--white), var(--grey));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  }
+.taka {
+    background: linear-gradient(var(--light-blue), var(--red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+#speakers img {
+  border-radius: 50%;
+  width: 40%;
+}
+
+/* チケットエリア */
+#ticket {
+  background-image: linear-gradient(90deg, var(--midorege), var(--red));
+  padding: 6rem 1rem 2rem;
+  -webkit-clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%); 
+  clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+}
+/* -webkit-clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+  clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+} */
+#ticket h2 {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.ticket_form {
+  max-width: 480px;
+  margin: 0 auto 5rem;
+}
+.ticket_form label {
+ color: var(--white);
+ display: block;
+ margin-bottom: .5rem;
+}
+.ticket_field {
+background: rgba(255, 255, 255,.6);
+padding: 1rem;
+width: 100%;
+margin-bottom: 1.5rem;
+}
+
+.ticket_btn {
+  background: var(--grey);
+  color: var(--white);
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer {
+  border-top: 1px solid rgba(255,255,255,.05 );
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--grey);
+}
+footer a {
+  text-decoration: underline;
+}
+/* デスクトップサイズ */
+@media (min-width: 600px) {
+  #hero h2,
+  #about h2,
+  #news h2,
+  #speakers h2,
+  #ticket h2 {
+    font-size: 5rem;
+  }
+  /* チケットのボタンエリア */
+a:hover,
+.ticket_btn:hover {
+  transition: .3s;
+}
+a:hover {
+  color: var(--red);
+}
+.ticket_btn:hover {
+  background: var(--yellow);
+}
+/* ヘッダー */
+.btn_menu {
+  display: none;
+}
+.header_list {
+  width: 100%;
+  position: static;
+  display: flex;
+}
+.header_list li{
+  margin: 0 0 0 1.5rem;
+}
+/* hero */
+#hero h1 {
+  font-size: 6.875rem;
+}
+.hero_date {
+  font-size: 3rem;
+}
+
+/* about */
+ .about_layout {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin: 0 auto;
+}
+ .about_description {
+   width: 42vw;
+  
+ }
+ .about_layout > .img {
+   width: 49vw;
+   vertical-align: bottom;
+   padding: 0 1rem;
+ }
+
+/* news */
+.news_table td {
+  display: table-cell;
+}
+.news_date {
+  padding: 1.125rem 0 1rem 1rem;
+}
+.news_content {
+  padding: 1rem 1rem 1rem 0;
+}
+/* supeakers======= ========================*/
+#speakers h2 {
+  margin-bottom: 4rem;
+}
+ .speakers_list {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.mana {
+  text-align: left;
+}
+.tatuya {
+  text-align: left;
+}
+.taka {
+  text-align: left;
+}
+.speakers_text {
+  margin-left: 2rem;
+}
+}

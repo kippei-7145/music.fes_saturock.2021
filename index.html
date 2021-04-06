@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="イベントサイトのランディングページ">
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+  <title>LPsite</title>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <a class="logo" href="#hero">SATU ROCK FESTIVAL</a>
+      <!-- レスポンシブ時のボタンMENU -->
+      <nav>
+        <button class="btn_menu">Menu</button>
+        <ul class="header_list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#speakers">Artist</a></li>
+          <li><a href="#ticket">Ticket</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+    <section id="hero">
+      <div class="wrapper">
+        <h1><span class="span_ttl">SATU ROCK</span> FESTIVAL.'<span class="span_time">2021</span>'</h1>
+        <p class="hero_date"> 2021. 8. 2~4 / 10:00 - 21:00</p>
+        <p class="hero_description">
+          北海道1の音楽フェス「SATU ROCK Festival」。去年は新型コロナウイルスで開催中止に。皆様には大変ご迷惑をおかけしました。この局面を乗り越えて、2021年をもって、ここに再会を宣言します。新しい挑戦やイベントも数々ご用意しております。マスクとアルコールを持って会場に足を運んでください。
+        </p>
+      </div>
+      </section>
+      
+  <!-- aboutセクション -->
+  <section id="about" class=>
+    <h2>About</h2>
+    <div class="about_layout">
+      <p class="about_description">
+        北海道1の音楽フェス「SATU ROCK Festival」。日本のアーティストはもちろん海外の有名アーティストをお招待して行う北海道１の音楽イベント今年で開催から10周年ということで例年にはない大物アーティストを招待予定。チケットはお早めに。
+      </p>
+      <!-- pc画像 -->
+      <div class="img">
+        <img src="images/fes.jpg" alt="PCの写真">
+      </div>
+    </div>
+    </section>
+
+
+        <section id="speakers" class="wrapper">
+          <h2>Artist</h2>
+          <!-- spelares画像 -->
+          <div class="speakers_list">
+            <div class="speakers_text">
+              <h3 class="mana">Alex's Vendar</h3>
+              <p>
+                海外ナンバーワンラッパー「Alex's Vendar」。どくどくなリズムから生み出されるそのEDMは正解を魅了する。是非、会場で！
+              </p>
+            </div>
+              <img src="images/music_art_1.jpg" alt="manaの顔写真">
+          </div>
+          <div class="speakers_list">
+            <div class="speakers_text">
+              <h3 class="tatuya">Mack Oldfield</h3>
+              <p>
+                全米ヒットチャート45週連続1位を獲得した「Mack Oldfield」。今の洋楽の時代を彩るスーパースターが特別に登場。このフェスに合わせて新曲を歌う予定。是非、ご期待を！
+              </p>
+            </div>
+              <img src="images/music_art_2.jpg" alt="manaの顔写真">
+          </div>
+
+          <div class="speakers_list">
+            <div class="speakers_text">
+              <h3 class="taka">ONE DESITION</h3>
+              <p>
+                全米ヒットチャート45週連続1位を獲得した「Mack Oldfield」。今の洋楽の時代を彩るスーパースターが特別に登場。このフェスに合わせて新曲を歌う予定。是非、ご期待を！
+              </p>
+            </div>
+              <img src="images/music_art_3.jpg" alt="manaの顔写真">
+          </div>
+
+        </section>
+
+    <!-- チケットセクション -->
+      <section id="ticket">
+        <h2>Ticket</h2>
+        <form class="ticket_form" action="#">
+          <label>Name</label>
+          <input class="ticket_field" type="text" placeholder="例：Yamada Taro">
+          <label>Email</label>
+          <input class="ticket_field" type="email" placeholder="例：hello@example.com">
+          <!-- チケットボタン -->
+          <input class="ticket_btn" type="submit" value="Join Now!">
+        </form>
+
+        <!-- フッター -->
+    </section>
+
+     <!-- newsセクション -->
+     <section id="news">
+      <h2>News</h2>
+      <div class="wrapper">
+      <table class="news_table">
+        <tbody>
+          <tr>
+            <td class="news_date">2021年5月16日</td>
+            <td class="news_content">チケット第二抽選開始</td>
+          </tr>
+          <tr>
+            <td class="news_date">2021年5月10日</td>
+            <td class="news_content">「SATU ROCK Festival」チケット抽選開始</td>
+          </tr>
+          <tr>
+            <td class="news_date">2021年4月23日</td>
+            <td class="news_content">「SATU ROCK Festival」座席表発表</td>
+          </tr>
+          <tr>
+            <td class="news_date">2021年4月8日</td>
+            <td class="news_content">「SATU ROCK Festival」開催決定</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+
+    <footer>
+      <div class="wrapper">
+        <p>
+          <a href="mailto:kippe7474@icloud.com">お問い合わせ</a> / <small>&copy;2021 WCB Conference</small>
+          </p>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
